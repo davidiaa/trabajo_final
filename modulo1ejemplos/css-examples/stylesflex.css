@@ -1,0 +1,78 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    margin: 10;
+    padding: 0;
+  }
+
+  /* Navegación con Flexbox */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #252f3b;
+    padding: 1rem 2rem;
+    color: white;
+  }
+
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  /* Contenido con CSS Grid */
+  .main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Dos columnas: principal y barra lateral */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  .article {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .sidebar {
+    background: #e2e2e2;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+    /* Contenedor de galería */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+  
+    .gallery img:hover {
+      transform: scale(1.2);
+    }
+
+  /* Responsividad simple */
+  @media (max-width: 768px) {
+    .main-content {
+      grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+  }
